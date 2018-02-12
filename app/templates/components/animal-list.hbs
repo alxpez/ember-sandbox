@@ -1,0 +1,7 @@
+<h2>{{model.category}}</h2>
+
+<ul>
+  {{#each model.animals as |animal|}}
+    <li {{action "showDetails" animal}}>{{animal.name}}</li>
+  {{/each}}
+</ul>
