@@ -1,7 +1,19 @@
-<h2>{{model.category}}</h2>
-
-<ul>
-  {{#each model.animals as |animal|}}
-    <li {{action "showDetails" animal}}>{{animal.name}}</li>
-  {{/each}}
-</ul>
+<article class="listing">
+  <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
+    <img src="{{animal.image}}" alt="">
+    <small>View Larger</small>
+  </a>
+  <h3>{{animal.title}}</h3>
+  <div class="detail owner">
+    <span>Author/s:</span> {{animal.author}}
+  </div>
+  <div class="detail type">
+    <span>Feeling:</span> {{animal-category animal.category}} - {{animal.category}}
+  </div>
+  <div class="detail location">
+    <span>First released:</span> {{animal.city}}
+  </div>
+  <div class="detail bedrooms">
+    <span>Year:</span> {{animal.year}}
+  </div>
+</article>

@@ -1,0 +1,12 @@
+<div class="jumbo">
+  <div class="right tomster"></div>
+  <h2>Welcome animal!</h2>
+  <p>A super unexciting experience about randomly related animal facts</p>
+  {{#link-to "about" class="button"}}
+    About animals
+  {{/link-to}}
+</div>
+
+{{#each model as |animalSong|}}
+  {{animal-list animal=animalSong}}
+{{/each}}
